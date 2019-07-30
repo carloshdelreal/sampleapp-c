@@ -19,7 +19,7 @@ this project was achived thanks to
 
 # Live Version
 
-We have a live version in [Heroku]() go an check our Sample App
+We have a live version in [Heroku sampleapp-c](https://sampleapp-c.herokuapp.com/) go an check our Sample App
 
 
 # Required Installations
