@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'foo/bar'
   get 'foo/baz'
+  post '/signup',  to: 'users#create'
   resources :users
 end
