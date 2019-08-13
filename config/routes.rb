@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   get 'foo/bar'
   get 'foo/baz'
+  resources :users
 end
