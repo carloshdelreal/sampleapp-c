@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class PasswordResetsController < ApplicationController
-  before_action :get_user,   only: %i[edit update]
+  before_action :get_user, only: %i[edit update]
   before_action :valid_user, only: %i[edit update]
   before_action :check_expiration, only: %i[edit update]
 
@@ -23,16 +23,16 @@ class PasswordResetsController < ApplicationController
   def edit; end
 
   def update
-    if params[:user][:password].empty?                  # Case (3)
+    if params[:user][:password].empty? # Case (3)
       @user.errors.add(:password, "can't be empty")
       render 'edit'
-    elsif @user.update_attributes(user_params)          # Case (4)
+    elsif @user.update_attributes(user_params) # Case (4)
       log_in @user
       @user.update_attribute(:reset_digest, nil)
       flash[:success] = 'Password has been reset.'
       redirect_to @user
     else
-      render 'edit'                                     # Case (2)
+      render 'edit' # Case (2)
     end
   end
 
