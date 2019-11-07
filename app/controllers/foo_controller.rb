@@ -1,7 +1,7 @@
-class FooController < ApplicationController
-  def bar
-  end
+# frozen_string_literal: true
 
-  def baz
-  end
+class FooController < ApplicationController
+  def bar; end
+
+  def baz; end
 end
